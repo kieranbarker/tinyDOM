@@ -36,6 +36,7 @@ const $ = class TinyDOM {
   /**
    * Add a class to all matching elements
    * @param {String} className The class to be added
+   * @returns {TinyDOM} The instance on which this method was called
    */
   addClass (className) {
     this.items().forEach(function (item) {
@@ -48,6 +49,7 @@ const $ = class TinyDOM {
   /**
    * Remove a class from all matching elements
    * @param {String} className The class to be removed
+   * @returns {TinyDOM} The instance on which this method was called
    */
   removeClass (className) {
     this.items().forEach(function (item) {
