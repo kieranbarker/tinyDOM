@@ -19,7 +19,7 @@ import pkg from './package.json';
 //
 
 // Copyright banner for output files
-const banner = `/*! ${pkg.name} v${pkg.version} | (c) ${new Date().getFullYear()} ${pkg.author.name} | ${pkg.license} License | ${pkg.repository.url} */`;
+const banner = `/*! tinyDOM v${pkg.version} | (c) ${new Date().getFullYear()} ${pkg.author.name} | ${pkg.license} License | ${pkg.repository.url} */`;
 
 // Desired output formats
 const formats = ['iife', 'es', 'amd', 'cjs'];
