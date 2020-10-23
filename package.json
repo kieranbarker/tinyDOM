@@ -6,8 +6,12 @@
   "module": "./dist/tinydom.es.min.js",
   "browser": "./dist/tinydom.min.js",
   "scripts": {
+    "clean": "rm -rf ./dist",
+    "prebuild": "npm run clean",
     "build": "npx rollup --config rollup.config.js --exports default",
-    "clean": "rm -rf ./dist"
+    "major": "npm version major && npm run build",
+    "minor": "npm version minor && npm run build",
+    "patch": "npm version patch && npm run build"
   },
   "repository": {
     "type": "git",
