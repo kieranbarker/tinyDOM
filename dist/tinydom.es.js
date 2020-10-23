@@ -1,4 +1,5 @@
-export default class TinyDOM {
+/*! tinyDOM v0.1.0 | (c) 2020 Kieran Barker | MIT License | https://github.com/kieranbarker/tinyDOM.git */
+class TinyDOM {
 
   /**
    * Create a new TinyDOM instance
@@ -59,3 +60,5 @@ export default class TinyDOM {
   }
 
 }
+
+export default TinyDOM;
