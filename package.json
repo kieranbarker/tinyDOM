@@ -1,6 +1,6 @@
 {
   "name": "tinydom",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A tiny DOM manipulation library written in ES6 with zero dependencies.",
   "main": "./dist/tinydom.cjs.min.js",
   "module": "./dist/tinydom.es.min.js",
