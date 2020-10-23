@@ -1,4 +1,4 @@
-/*! tinyDOM v0.0.0 | (c) 2020 Kieran Barker | MIT License | https://github.com/kieranbarker/tinyDOM.git */
+/*! tinyDOM v0.1.0 | (c) 2020 Kieran Barker | MIT License | https://github.com/kieranbarker/tinyDOM.git */
 'use strict';
 
 class TinyDOM {
