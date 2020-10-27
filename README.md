@@ -2,8 +2,6 @@
 
 A tiny DOM manipulation library written in ES6 with zero dependencies.
 
-⚠️ **This project is still in the early stages of development.** ⚠️
-
 1. [Installation](#installation)
 2. [Creating a new instance](#creating-a-new-instance)
 3. [Instance methods](#instance-methods)
