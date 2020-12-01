@@ -38,10 +38,12 @@ export default class TinyDOM {
    * @returns {TinyDOM} The instance on which this method was called
    */
   addClass (className) {
+    // Add the class
     this.items().forEach(function (item) {
       item.classList.add(className);
     });
 
+    // Return the current instance
     return this;
   }
 
@@ -51,10 +53,12 @@ export default class TinyDOM {
    * @returns {TinyDOM} The instance on which this method was called
    */
   removeClass (className) {
+    // Remove the class
     this.items().forEach(function (item) {
       item.classList.remove(className);
     });
 
+    // Return the current instance
     return this;
   }
 
