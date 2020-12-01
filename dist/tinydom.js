@@ -1,4 +1,4 @@
-/*! tinyDOM v0.1.0 | (c) 2020 Kieran Barker | MIT License | https://github.com/kieranbarker/tinyDOM.git */
+/*! tinyDOM v1.0.0 | (c) 2020 Kieran Barker | MIT License | https://github.com/kieranbarker/tinyDOM.git */
 const $ = (function () {
   'use strict';
 
@@ -42,10 +42,12 @@ const $ = (function () {
      * @returns {TinyDOM} The instance on which this method was called
      */
     addClass (className) {
+      // Add the class
       this.items().forEach(function (item) {
         item.classList.add(className);
       });
 
+      // Return the current instance
       return this;
     }
 
@@ -55,10 +57,12 @@ const $ = (function () {
      * @returns {TinyDOM} The instance on which this method was called
      */
     removeClass (className) {
+      // Remove the class
       this.items().forEach(function (item) {
         item.classList.remove(className);
       });
 
+      // Return the current instance
       return this;
     }
 
