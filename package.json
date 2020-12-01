@@ -1,5 +1,5 @@
 {
-  "name": "tinydom",
+  "name": "tiny-dom",
   "version": "1.0.0",
   "description": "A tiny DOM manipulation library written in ES6 with zero dependencies.",
   "main": "./dist/tinydom.cjs.min.js",
