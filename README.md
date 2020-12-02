@@ -8,7 +8,19 @@ A tiny DOM manipulation library written in ES6 with zero dependencies.
 
 ## Installation
 
-To get started, [download the files directly from GitHub](https://github.com/kieranbarker/tinyDOM/archive/main.zip).
+To get started, install tinyDOM as a dependency:
+
+```shell
+npm i tiny-dom
+```
+
+Then require it in your script:
+
+```js
+const $ = require('tiny-dom');
+```
+
+You can also [download the files directly from GitHub](https://github.com/kieranbarker/tinyDOM/archive/main.zip).
 
 Compiled and production-ready code can be found in the `dist` directory. The `src` directory contains development code.
 
