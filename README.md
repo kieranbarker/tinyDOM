@@ -34,9 +34,9 @@ tinyDOM also supports modern browsers and module bundlers (Rollup, Webpack, Snow
 import { TinyDOM as $ } from 'https://cdn.jsdelivr.net/npm/tiny-dom@2/dist/tinydom.es.min.js';
 ```
 
-### npm
+### CommonJS
 
-You can also use npm (or your favourite package manager). First, install the package via the command line.
+You can also use npm. First, install the package via the command line.
 
 ```shell
 npm i tiny-dom
@@ -45,15 +45,7 @@ npm i tiny-dom
 Then import the package.
 
 ```js
-import { TinyDOM as $ } from 'tiny-dom';
-```
-
-### CommonJS
-
-If you use Node.js, you can import TinyDOM using the `require()` method with the `.cjs` version.
-
-```js
-const { TinyDOM: $ } = require('https://cdn.jsdelivr.net/npm/tiny-dom@2/dist/tinydom.cjs.min.js');
+const { TinyDOM: $ } = require('tiny-dom');
 ```
 
 ### AMD
