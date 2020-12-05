@@ -1,5 +1,7 @@
-/*! tinyDOM v1.0.2 | (c) 2020 Kieran Barker | MIT License | https://github.com/kieranbarker/tinyDOM.git */
+/*! tinyDOM v2.0.0 | (c) 2020 Kieran Barker | MIT License | https://github.com/kieranbarker/tinyDOM.git */
 'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
 
 class TinyDOM {
 
@@ -67,4 +69,4 @@ class TinyDOM {
 
 }
 
-module.exports = TinyDOM;
+exports.TinyDOM = TinyDOM;

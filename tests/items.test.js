@@ -1,5 +1,5 @@
 // Import TinyDOM
-const TinyDOM = require('../dist/tinydom.cjs');
+const { TinyDOM: $ } = require('../dist/tinydom.cjs');
 
 test('Returns an immutable copy of the matching elements', () => {
   // Set the HTML body
@@ -10,7 +10,7 @@ test('Returns an immutable copy of the matching elements', () => {
   `;
 
   // Create a new TinyDOM instance
-  const paragraphs = new TinyDOM('p');
+  const paragraphs = new $('p');
 
   // Get the matching elements
   const nodes = paragraphs.nodes;
