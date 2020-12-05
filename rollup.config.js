@@ -1,89 +1,71 @@
-/*!
- * Based on Chris Ferdinandi's 'Build Tool Boilerplate'
- * https://github.com/cferdinandi/build-tool-boilerplate
- */
-
-//
-// Imports
-//
-
-// Terser
 import { terser } from 'rollup-plugin-terser';
+import { version, author, license, repository } from './package.json';
 
-// package.json
-import pkg from './package.json';
+const banner = `/*! tinyDOM v${version} | (c) ${new Date().getFullYear()} ${author.name} | ${license} License | ${repository.url} */`;
 
-
-//
-// Variables
-//
-
-// Copyright banner for output files
-const banner = `/*! tinyDOM v${pkg.version} | (c) ${new Date().getFullYear()} ${pkg.author.name} | ${pkg.license} License | ${pkg.repository.url} */`;
-
-// Desired output formats
-const formats = ['iife', 'es', 'amd', 'cjs'];
-
-
-//
-// Functions
-//
-
-/**
- * Create a single output object
- * @param {String} format The format to use
- * @param {Boolean} minify Whether to minify the output
- * @returns {Object} The output object
- */
-function createOutput (format, minify) {
-  // Configure the suffix for this output
-  const suffix = (format === 'iife' ? '' : `.${format}`) + (minify ? '.min' : '');
-
-  // Create the output object
-  const output = {
-    file: `./dist/tinydom${suffix}.js`,
-    format: format,
-    banner: banner,
-    preferConst: true
-  };
-
-  // If IIFE, set namespace
-  if (format === 'iife') {
-    output.name = '$';
+export default [
+  {
+    input: './src/iife.js',
+    output: [
+      {
+        banner: banner,
+        file: './dist/tinydom.js',
+        format: 'iife',
+        name: '$',
+        preferConst: true
+      },
+      {
+        banner: banner,
+        file: './dist/tinydom.min.js',
+        format: 'iife',
+        name: '$',
+        plugins: [terser()],
+        preferConst: true
+      }
+    ]
+  },
+  {
+    input: './src/module.js',
+    output: [
+      {
+        banner: banner,
+        file: './dist/tinydom.cjs.js',
+        format: 'cjs',
+        preferConst: true
+      },
+      {
+        banner: banner,
+        file: './dist/tinydom.cjs.min.js',
+        format: 'cjs',
+        plugins: [terser()],
+        preferConst: true
+      },
+      {
+        banner: banner,
+        file: './dist/tinydom.es.js',
+        format: 'es',
+        preferConst: true
+      },
+      {
+        banner: banner,
+        file: './dist/tinydom.es.min.js',
+        format: 'es',
+        plugins: [terser()],
+        preferConst: true
+      },
+      {
+        banner: banner,
+        file: './dist/tinydom.amd.js',
+        format: 'amd',
+        preferConst: true
+      },
+      {
+        banner: banner,
+        file: './dist/tinydom.amd.min.js',
+        format: 'amd',
+        plugins: [terser()],
+        preferConst: true
+      }
+    ]
   }
-
-  // If minifying, set Terser plugin
-  if (minify) {
-    output.plugins = [terser()];
-  }
-
-  // Return the output object
-  return output;
-}
-
-/**
- * Create the final object to be exported
- * @returns {Object} The object to be exported
- */
-function createExport () {
-  // Create the development and production outputs
-  const developmentOutputs = formats.map(format => createOutput(format, false));
-  const productionOutputs = formats.map(format => createOutput(format, true));
-
-  // Concatenate the development and production outputs
-  const outputs = developmentOutputs.concat(productionOutputs);
-
-  // Return the final object
-  return {
-    input: './src/tinydom.js',
-    output: outputs
-  };
-}
-
-
-//
-// Exports
-//
-
-// Export the final object
-export default createExport();
+];

@@ -1,5 +1,5 @@
-/*! tinyDOM v1.0.2 | (c) 2020 Kieran Barker | MIT License | https://github.com/kieranbarker/tinyDOM.git */
-define(function () { 'use strict';
+/*! tinyDOM v2.0.0 | (c) 2020 Kieran Barker | MIT License | https://github.com/kieranbarker/tinyDOM.git */
+define(['exports'], function (exports) { 'use strict';
 
   class TinyDOM {
 
@@ -67,6 +67,8 @@ define(function () { 'use strict';
 
   }
 
-  return TinyDOM;
+  exports.TinyDOM = TinyDOM;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
 
 });

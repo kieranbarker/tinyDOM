@@ -1,13 +1,13 @@
 {
   "name": "tiny-dom",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "A tiny DOM manipulation library written in ES6 with zero dependencies.",
   "main": "./dist/tinydom.cjs.min.js",
   "module": "./dist/tinydom.es.min.js",
   "browser": "./dist/tinydom.min.js",
   "scripts": {
     "test": "npx jest --coverage",
-    "build": "npm test && npx rollup --config rollup.config.js --exports default"
+    "build": "npx rollup --config"
   },
   "repository": {
     "type": "git",

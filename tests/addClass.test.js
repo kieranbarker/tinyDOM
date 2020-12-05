@@ -1,5 +1,5 @@
 // Import TinyDOM
-const TinyDOM = require('../dist/tinydom.cjs');
+const { TinyDOM: $ } = require('../dist/tinydom.cjs');
 
 test('Adds a class to all matching elements', () => {
   // Set the HTML body
@@ -10,7 +10,7 @@ test('Adds a class to all matching elements', () => {
   `;
 
   // Create a new TinyDOM instance
-  const paragraphs = new TinyDOM('p');
+  const paragraphs = new $('p');
 
   // Add a class to all matching elements
   paragraphs.addClass('some-class');

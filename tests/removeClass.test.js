@@ -1,5 +1,5 @@
 // Import TinyDOM
-const TinyDOM = require('../dist/tinydom.cjs');
+const { TinyDOM: $ } = require('../dist/tinydom.cjs');
 
 test('Removes a class from all matching elements', () => {
   // Set the HTML body
@@ -10,7 +10,7 @@ test('Removes a class from all matching elements', () => {
   `;
 
   // Create a new TinyDOM instance
-  const paragraphs = new TinyDOM('p');
+  const paragraphs = new $('p');
 
   // Remove a class from all matching elements
   paragraphs.removeClass('some-class');

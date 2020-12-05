@@ -1,5 +1,5 @@
 // Import TinyDOM
-const TinyDOM = require('../dist/tinydom.cjs');
+const { TinyDOM: $ } = require('../dist/tinydom.cjs');
 
 test('Returns the first matching element', () => {
   // Set the HTML body
@@ -10,7 +10,7 @@ test('Returns the first matching element', () => {
   `;
 
   // Create a new TinyDOM instance
-  const paragraphs = new TinyDOM('p');
+  const paragraphs = new $('p');
 
   // Get the first matching element
   const first = paragraphs.first();

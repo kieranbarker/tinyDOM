@@ -8,38 +8,62 @@ A tiny DOM manipulation library written in ES6 with zero dependencies.
 
 ## Installation
 
-To get started, install tinyDOM as a dependency:
+### Script Tag
 
-```shell
-npm i tiny-dom
-```
+The easiest way to get started is by using the jsDelivr CDN via an HTML `<script></script>` tag.
 
-Then require it in your script:
+tinyDOM uses [semantic versioning](https://semver.org). You can grab a major, minor, or patch version from the CDN with the @1.2.3 syntax. You can find all available versions under [releases](https://github.com/kieranbarker/tinyDOM/releases).
 
-```js
-const $ = require('tiny-dom');
+```html
+<script src="https://cdn.jsdelivr.net/npm/tiny-dom@2/dist/tinydom.min.js"></script>
 ```
 
 You can also [download the files directly from GitHub](https://github.com/kieranbarker/tinyDOM/archive/main.zip).
 
 Compiled and production-ready code can be found in the `dist` directory. The `src` directory contains development code.
 
-Include tinyDOM before your own scripts. As a best practice, you should place your scripts directly before the closing `</body>` tag:
-
 ```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cool App</title>
-  </head>
-  <body>
-    <h1>My Cool App</h1>
-    <script src="tinydom.min.js"></script>
-    <script src="app.js"></script>
-  </body>
-</html>
+<script src="path/to/tinydom.min.js"></script>
+```
+
+### ES Module
+
+tinyDOM also supports modern browsers and module bundlers (Rollup, Webpack, Snowpack, etc.) using the ES module `import` syntax. Use the `.es` version.
+
+```js
+import { TinyDOM as $ } from 'https://cdn.jsdelivr.net/npm/tiny-dom@2/dist/tinydom.es.min.js';
+```
+
+### npm
+
+You can also use npm (or your favourite package manager). First, install the package via the command line.
+
+```shell
+npm i tiny-dom
+```
+
+Then import the package.
+
+```js
+import { TinyDOM as $ } from 'tiny-dom';
+```
+
+### CommonJS
+
+If you use Node.js, you can import TinyDOM using the `require()` method with the `.cjs` version.
+
+```js
+const { TinyDOM: $ } = require('https://cdn.jsdelivr.net/npm/tiny-dom@2/dist/tinydom.cjs.min.js');
+```
+
+### AMD
+
+If you use RequireJS, SystemJS, or another AMD format, you can import TinyDOM with the `.amd` version.
+
+```js
+requirejs(['https://cdn.jsdelivr.net/npm/tiny-dom@2/dist/tinydom.amd.min.js'], function ({ TinyDOM: $ }) {
+  //...
+});
 ```
 
 ## Creating a new instance
